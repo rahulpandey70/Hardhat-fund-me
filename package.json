@@ -1,4 +1,7 @@
 {
+  "name":"hardhat-fund-me",
+  "auther": "rahul pandey",
+  "version": "1.0.0",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
@@ -22,5 +25,13 @@
     "dotenv": "^14.2.0",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solhint": "^3.3.7"
+  },
+  "scripts": {
+    "test": "yarn hardhat test",
+    "test:staging": "yarn hardhat test --network sepolia",
+    "lint": "yarn solhint 'contracts/*.sol'",
+    "lint:fix": "yarn solhint 'contracts/*.sol' --fix",
+    "format": "yarn prettier --write .",
+    "coverage":"yarn hardhat coverage"
   }
 }
